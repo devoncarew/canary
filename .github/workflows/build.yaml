@@ -1,0 +1,21 @@
+name: Validate packages
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: "${{ matrix.bot }} (${{ matrix.dart-version }})"
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        bot: [foo, bar]
+        dart-version: [dev, stable]
+    
+# todo: install dart
+# todo: execute test script(s)
+
+    steps:
+      - uses: actions/checkout@v2
+      - run: ./tool/install-dart.sh
