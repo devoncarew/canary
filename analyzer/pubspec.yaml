@@ -1,0 +1,3 @@
+name: analyzer_test
+dependencies:
+  analyzer: any
