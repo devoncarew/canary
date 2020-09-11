@@ -1,18 +1,22 @@
-name: Validate packages
+name: canary
 
 on: [push, pull_request]
 
 jobs:
   build:
-    name: "${{ matrix.bot }} (${{ matrix.dart-version }})"
+    name: "${{ matrix.bot }} ${{ matrix.dart-version }}"
+    # We want to run on external PRs but not on our own internal PRs as they'll be run
+    # by the push to the branch.
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository
+
     runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
       matrix:
         bot: [foo, bar]
-        dart-version: [dev, stable]
-    
+        dart-version: [2.8.4, 2.9.3, dev, beta]
+
 # todo: install dart
 # todo: execute test script(s)
 
