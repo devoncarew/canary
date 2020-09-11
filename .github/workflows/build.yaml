@@ -29,10 +29,10 @@ jobs:
       - name: Install Dart
         env:
           DART_VERSION: ${{ matrix.dart-version }}
-        run: ./.github/install-dart.sh
-
-      - name: Update path
-        run: echo "::add-path::dart-sdk/bin"
+        run: |
+          ./.github/install-dart.sh
+          echo "::add-path::./dart-sdk/bin"
 
       - name: Test ${{ matrix.bot }}
-        run: ./${{ matrix.bot }}/test.sh
+        working-directory: ${{ matrix.bot }}
+        run: ./test.sh
