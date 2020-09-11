@@ -21,10 +21,10 @@ jobs:
           - analyzer
           - webdev
         dart-version:
-          - stable/release/2.8.4
-          - stable/release/2.9.3
           - dev/release/latest
           - beta/release/latest
+          - stable/release/2.9.3
+          - stable/release/2.8.4
 
     steps:
       - uses: actions/checkout@v2
