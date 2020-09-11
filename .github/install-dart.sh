@@ -3,13 +3,9 @@
 # Fast fail the script on failures.
 set -ex
 
-BOTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-
-pwd
-
 echo "hello world"
 
-echo Installing Dart on #{os}
+echo Installing Dart ${DART_VERSION}
 
 # sh.cmd "curl --connect-timeout 15 --retry 5 #{archive_url}/sdk/dartsdk-#{os}-x64-release.zip > ${TRAVIS_HOME}/dartsdk.zip"
 # sh.cmd "unzip ${TRAVIS_HOME}/dartsdk.zip -d ${TRAVIS_HOME} > /dev/null"

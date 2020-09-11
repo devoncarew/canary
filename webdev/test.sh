@@ -7,6 +7,4 @@ pwd
 
 echo "todo: test webdev"
 
-echo $DART_VERSION
-
 dart --version
