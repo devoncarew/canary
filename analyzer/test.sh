@@ -3,6 +3,11 @@
 # Fast fail the script on failures.
 set -ex
 
-pwd
+# Ensure the package can solve against the SDK.
+pub get
 
-echo "todo: test package:analyzer"
+# Ensure it analyses cleanly.
+dartanalyzer --fatal-infos .
+
+# And, that the CFE / runtime is happy with it.
+dart --enable-asserts bin/smoketest.dart

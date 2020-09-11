@@ -3,8 +3,6 @@
 # Fast fail the script on failures.
 set -ex
 
-echo "hello world"
-
 echo Installing Dart ${DART_VERSION}
 
 curl --connect-timeout 15 --retry 5 \

@@ -3,10 +3,5 @@
 # Fast fail the script on failures.
 set -ex
 
-pwd
-
-echo "todo: test webdev"
-
-echo $PATH
-
-dart --version
+# todo: improve this
+pub global activate webdev
