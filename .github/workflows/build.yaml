@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        bot: [foo, bar]
+        bot: [analyzer, webdev]
         dart-version: [2.8.4, 2.9.3, dev, beta]
 
 # todo: install dart
@@ -22,4 +22,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - run: ./tool/install-dart.sh
+
+      - name: Install Dart
+        env:
+          DART_VERSION: ${{ matrix.dart-version }}
+        run: ./.github/install-dart.sh
+
+      - name: Test ${{ matrix.bot }}
+        run: ./${{ matrix.bot }}/test.sh

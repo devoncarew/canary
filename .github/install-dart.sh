@@ -9,8 +9,8 @@ pwd
 
 echo "hello world"
 
+echo Installing Dart on #{os}
 
-# sh.echo "Installing Dart on #{os}", ansi: :yellow
 # sh.cmd "curl --connect-timeout 15 --retry 5 #{archive_url}/sdk/dartsdk-#{os}-x64-release.zip > ${TRAVIS_HOME}/dartsdk.zip"
 # sh.cmd "unzip ${TRAVIS_HOME}/dartsdk.zip -d ${TRAVIS_HOME} > /dev/null"
 # sh.cmd "rm ${TRAVIS_HOME}/dartsdk.zip"
