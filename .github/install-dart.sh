@@ -14,4 +14,6 @@ rm dartsdk.zip
 
 ls -ls
 
+ls -ls dart-sdk
+
 ./dart-sdk/bin/dart --version
