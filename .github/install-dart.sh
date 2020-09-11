@@ -12,4 +12,6 @@ curl --connect-timeout 15 --retry 5 \
 unzip dartsdk.zip -d dart-sdk > /dev/null
 rm dartsdk.zip
 
+ls -ls
+
 ./dart-sdk/bin/dart --version
