@@ -21,6 +21,7 @@ jobs:
       matrix:
         bot:
           - analyzer
+          - stagehand
           - webdev
         dart-version:
           - dev/release/latest
