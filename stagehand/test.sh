@@ -10,7 +10,7 @@ mkdir console-simple; pushd console-simple
 stagehand console-simple
 pub get
 dartanalyzer --fatal-infos .
-dart bin/main.dart
+dart bin/console_simple.dart
 popd
 
 # console-full
@@ -18,7 +18,7 @@ mkdir console-full; pushd console-full
 stagehand console-full
 pub get
 dartanalyzer --fatal-infos .
-dart bin/main.dart
+dart bin/console_full.dart
 popd
 
 # package-simple
