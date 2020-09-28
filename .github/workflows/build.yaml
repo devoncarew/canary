@@ -28,6 +28,7 @@ jobs:
         dart-version:
           - dev/release/latest
           - beta/release/latest
+          - stable/release/2.10.0
           - stable/release/2.9.3
           - stable/release/2.8.4
 
