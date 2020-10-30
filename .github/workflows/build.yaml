@@ -40,8 +40,8 @@ jobs:
           DART_VERSION: ${{ matrix.dart-version }}
         run: |
           ./.github/install-dart.sh
-          echo "::add-path::`pwd`/dart-sdk/bin"
-          echo "::add-path::$HOME/.pub-cache/bin"
+          echo "`pwd`/dart-sdk/bin" >> $GITHUB_PATH
+          echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
 
       - name: Test ${{ matrix.bot }}
         working-directory: ${{ matrix.bot }}
