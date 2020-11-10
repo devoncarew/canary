@@ -1,2 +1,3 @@
 name: dartdoc_test
-sdk: ^2.8.0
+environment:
+  sdk: ^2.8.0

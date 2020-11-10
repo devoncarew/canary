@@ -1,4 +1,5 @@
 name: analyzer_test
 dependencies:
   analyzer: any
-sdk: ^2.8.0
+environment:
+  sdk: ^2.8.0
